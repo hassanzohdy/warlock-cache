@@ -6,7 +6,6 @@ import {
 } from "@mongez/fs";
 import { GenericObject } from "@mongez/reinforcements";
 import path from "path";
-import { storagePath } from "../../utils";
 import { CacheDriver, FileCacheOptions } from "../types";
 import { BaseCacheDriver } from "./base-cache-driver";
 
@@ -29,7 +28,9 @@ export class FileCacheDriver
       return directory();
     }
 
-    return storagePath("cache");
+    throw new Error(
+      "Cache directory is not defined, please define it in the file driver options",
+    );
   }
 
   /**

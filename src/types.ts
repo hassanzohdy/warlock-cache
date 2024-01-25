@@ -54,7 +54,7 @@ export type FileCacheOptions = {
    *
    * @default storagePath("cache")
    */
-  directory?: string | (() => string);
+  directory: string | (() => string);
   /**
    * File name
    *
@@ -178,7 +178,7 @@ type MergeWithDefaultDrivers<T> = T extends undefined
 
 export type CacheConfigurations<
   T extends string | undefined = undefined,
-  DriverName = MergeWithDefaultDrivers<T>
+  DriverName = MergeWithDefaultDrivers<T>,
 > = {
   /**
    * The default cache driver name

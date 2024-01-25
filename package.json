@@ -1,6 +1,6 @@
 {
     "name": "@mongez/warlock.cache",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Cache Manager for Nodejs",
     "main": "src/index.ts",
     "scripts": {
